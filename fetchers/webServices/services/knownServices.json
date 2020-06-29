@@ -1,0 +1,23 @@
+{
+	"GitLab": [
+		"salsa.debian.org",
+		"invent.kde.org",
+		"code.videolan.org",
+		"foss.heptapod.net",
+		"gitgud.io",
+		"git.metabarcoding.org",
+		"production.eng.it",
+		"bsvgit.informatik.uni-leipzig.de",
+		"git.imp.fu-berlin.de",
+		"forge.etsi.org",
+		"git.gutta.com",
+		"git.uclalemur.com",
+		"git.ieee.uni-passau.de",
+		"code.datasciencedojo.com",
+		"ais.matadorsuite.com",
+		"githacks.org",
+		"code.ornl.gov",
+		"framagit.org",
+		"dev.seemoo.tu-darmstadt.de",
+	]
+}
