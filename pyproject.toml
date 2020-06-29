@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=61.2.0", "wheel", "setuptools_scm[toml]>=3.4.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fetchers"
+authors = [{name = "KOLANICH"}]
+description = "Just a lib for fetching source code repositories and precompiled binaries from the net and putting them into FS somewhere."
+readme = "ReadMe.md"
+keywords = ["aria2c", "git", "archive"]
+license = {text = "Unlicense"}
+classifiers = [
+	"Programming Language :: Python",
+	"Programming Language :: Python :: 3",
+	"Development Status :: 4 - Beta",
+	"Environment :: Other Environment",
+	"Intended Audience :: Developers",
+	"License :: Public Domain",
+	"Operating System :: OS Independent",
+	"Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.4"
+dependencies = [
+	"AnyVer", # @ git+https://codeberg.org/prebuilder/AnyVer.py.git
+	"pantarei", # @ git+https://codeberg.org/KOLANICH-libs/pantarei.py.git
+	"fsutilz", # @ git+https://codeberg.org/prebuilder/fsutilz.py.git
+	"downloaders", # @ git+https://codeberg.org/prebuilder/downloaders.py.git
+	"GitLabInstancesDataset", # @ git+https://codeberg.org/prebuilder/GitLabInstancesDataset.py
+	"beautifulsoup4", # MIT
+	"dateutil", @ git+https://github.com/dateutil/dateutil # Apache-2.0
+	"requests", # @ git+https://github.com/psf/requests # Apache-2.0
+	"GitPython", # @ git+https://github.com/gitpython-developers/GitPython.git" # BSD-3-Clause
+]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://codeberg.org/prebuilder/fetchers.py"
+
+[project.optional-dependencies]
+openpgp = [
+	"OpenPGPAbs", # @ git+https://codeberg.org/KOLANICH-libs/OpenPGPAbs.py
+]
+
+[tool.setuptools]
+zip-safe = true
+include-package-data = false
+
+[tool.setuptools.packages]
+find = {namespaces = false}
+
+[tool.setuptools_scm]
